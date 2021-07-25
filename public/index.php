@@ -7,6 +7,7 @@ include_once '../DashboardView.php';
 include_once '../AuthService.php';
 
 // 初始化
+session_save_path('../storage/sessions');
 session_start();
 $config = new DatabaseConfig();
 $connection = $config->newPdo();
